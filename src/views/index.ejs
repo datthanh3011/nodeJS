@@ -6,11 +6,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thực hành expressjs</title>
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
 </head>
 
 <body>
-    <%= data %>
-        <h1>Hello from ejs</h1>
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#news">News</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#about">About</a></li>
+    </ul>
+    <div class="w3-container">
+        <h2>Data</h2>
+        <p>The w3-striped class adds zebra-stripes to a table:</p>
+
+        <table class="w3-table w3-striped">
+            <tr>
+                <th>Date</th>
+                <th>Quality</th>
+                <th>Price</th>
+                <th>Action</th>
+            </tr>
+            <tbody>
+                <% for(let i=0; i < data.length ; i++){ %>
+                    <tr>
+                        <td>
+                            <%= new Date(data[i].ngaymua).toLocaleDateString('vi-VN')%>
+                        </td>
+                        <td>
+                            <%= Number(data[i].soluong) %>
+                        </td>
+                        <td>
+                            <%= Number(data[i].giamua).toLocaleString('vi-VN', { style: 'currency' , currency: 'VND'
+                                })%>
+                        </td>
+                        <td>
+                            <button>Detail</button>
+                        </td>
+                    </tr>
+                    <% }%>
+            </tbody>
+        </table>
+    </div>
 </body>
 
 </html>
