@@ -26,3 +26,46 @@ ul li a {
 ul li a:hover {
     background-color: #111111;
 }
+
+
+
+
+body {
+    background-color: #f8f9fa;
+}
+
+.container {
+    max-width: 600px;
+    margin-top: 50px;
+}
+
+.card {
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.nav-tabs .nav-link.active {
+    background-color: #ffc107;
+    color: #000;
+    font-weight: bold;
+    border-color: #ffc107 #ffc107 #fff;
+}
+
+.nav-tabs .nav-link {
+    color: #555;
+}
+
+.form-label {
+    font-weight: 500;
+}
+
+.btn-primary {
+    background-color: #ffc107;
+    border: none;
+    color: #000;
+    font-weight: bold;
+}
+
+.btn-primary:hover {
+    background-color: #e0a800;
+}

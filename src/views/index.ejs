@@ -23,6 +23,7 @@
         <table class="w3-table w3-striped">
             <tr>
                 <th>Date</th>
+                <th>Time</th>
                 <th>Quality</th>
                 <th>Price</th>
                 <th>Action</th>
@@ -34,6 +35,10 @@
                             <%= new Date(data[i].ngaymua).toLocaleDateString('vi-VN')%>
                         </td>
                         <td>
+                            <%= new Date(data[i].ngaymua).toLocaleTimeString('vi-VN', { hour: '2-digit' ,
+                                minute: '2-digit' }) %>
+                        </td>
+                        <td>
                             <%= Number(data[i].soluong) %>
                         </td>
                         <td>
@@ -41,7 +46,7 @@
                                 })%>
                         </td>
                         <td>
-                            <button>Detail</button>
+                            <a href="/detail/id/<%=data[i].id%>">Detail</a>
                         </td>
                     </tr>
                     <% }%>
